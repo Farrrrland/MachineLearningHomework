@@ -35,8 +35,8 @@ test_loader = torch.utils.data.DataLoader(test_data,batch_size=batch_size, shuff
 input_size = 784
 num_classes = 1
 num_epochs = 50
-learning_rate = 0.001
-momentums = [0, 0.8, 0.9, 0.95, 0.98]
+momentums = [0, 0.9]
+learning_rates = [0.001, 0.01, 0.1]
 
 # Model Definition
 class LinearModel(nn.Module):
@@ -59,7 +59,7 @@ class HingeLoss(nn.Module):
     def forward(self, inputs, target):
         return torch.mean((1 - target * inputs).clamp(min=0))
 
-def runModel(model, criterion, fname, momentum):
+def runModel(model, criterion, fname, momentum, learning_rate):
     optimizer = torch.optim.SGD(model.parameters(), lr = learning_rate, momentum = momentum)
     with open(fname, 'w') as f:
         for epoch in range(num_epochs):
@@ -97,9 +97,11 @@ def runModel(model, criterion, fname, momentum):
 if __name__ == "__main__":
     # Logistic Regression
     for idx, momentum in enumerate(momentums):
-        fname = sys.path[0] + os.sep + "log" + os.sep + f"epoch_logistic_regression_{idx}.txt"
-        runModel(LinearModel(input_size, num_classes), LogisticLoss(), fname, momentum)
+        for idx_, learning_rate in enumerate(learning_rates):
+            fname = sys.path[0] + os.sep + "log" + os.sep + f"epoch_logistic_regression_{idx}_{idx_}.txt"
+            runModel(LinearModel(input_size, num_classes), LogisticLoss(), fname, momentum, learning_rate)
     # SVM
     for idx, momentum in enumerate(momentums):
-        fname = sys.path[0] + os.sep + "log" + os.sep + f"epoch_svm_{idx}.txt"
-        runModel(LinearModel(input_size, num_classes), HingeLoss(), fname, momentum)
+        for idx_, learning_rate in enumerate(learning_rates):
+            fname = sys.path[0] + os.sep + "log" + os.sep + f"epoch_svm_{idx}_{idx_}.txt"
+            runModel(LinearModel(input_size, num_classes), HingeLoss(), fname, momentum, learning_rate)
