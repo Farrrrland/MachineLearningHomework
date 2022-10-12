@@ -34,7 +34,7 @@ test_loader = torch.utils.data.DataLoader(test_data,batch_size=batch_size, shuff
 # Hyper parameters
 input_size = 784
 num_classes = 1
-num_epochs = 50
+num_epochs = 20
 momentums = [0, 0.9]
 learning_rates = [0.001, 0.01, 0.1]
 
