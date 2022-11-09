@@ -3,5 +3,5 @@ data/
 pytorch/
 cifar-10-batches-py/
 .ipynb_checkpoints/
-# *.ipynb
+*.ipynb
 *.tar.gz
