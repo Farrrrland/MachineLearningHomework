@@ -7,3 +7,16 @@ According to the reguirements (see `/file` folder), this program includes:
 3. `ploy.py` is used to plot the results of the classifier, including losses of each epoch under different network structures.
 4. `./img` folder contains the out put of `plot.py`.
 5. `./log` folder stores the log data for the training process, including the average loss and accuracy of each iteration. The log files are organized by models, each model has one unique log file which is easy to identify. In this approach, epoch size is set to 20, and the last piece of the log data contains the final accuracy of the model.
+
+
+## How to start
+
+Simply run the code with 
+```bash
+# run image classfier with different model, and record the data needed
+python3 image_classifier.py
+# plot the loss data of each epoch
+python3 plot.py
+```
+
+Then you can find the figure in `./img` folder and log data in `./log` folder.
