@@ -144,5 +144,5 @@ if __name__ == "__main__":
     fname = sys.path[0] + os.sep + "log" + os.sep + "mlp_non_act.txt"
     runModel(MLP_non_act(), fname)
     print("************** Separate Line **************")
-    # fname = sys.path[0] + os.sep + "log" + os.sep + "cnn.txt"
-    # runModel(CNN(), fname)
+    fname = sys.path[0] + os.sep + "log" + os.sep + "cnn.txt"
+    runModel(CNN(), fname)
