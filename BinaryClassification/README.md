@@ -7,7 +7,7 @@ According to the requirements, this program includes
 2. `binary_classification.py`, source code of the image classification pipeline. We imply function `runModel` and by configuration, supports two types of classifier, logistic regression or the SVM. Multiple step sizes are included for detailed analysis.
 3. `ploy.py` is used to plot the results of the classifier, including losses of each epoch (iteration) with different hyper parameters.
 4. `./img` folder contains the out put of `plot.py`.
-5. `./log` folder stores the log data for the training process, including the average loss and accuracy of each iteration. The log files are organized by model type and hyper parameters, see `/log/README.md` for more details. In this approach, epoch size is set to 50, and the last piece of the log data contains the final accuracy of the model.
+5. `./log` folder stores the log data for the training process, including the average loss and accuracy of each iteration. The log files are organized by model type and hyper parameters, see `/log/README.md` for more details. In this approach, epoch size is set to 20, and the last piece of the log data contains the final accuracy of the model.
 
 ## How to start
 
