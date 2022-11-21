@@ -1,0 +1,10 @@
+numpy
+matplotlib
+torch
+torchtext
+torchvision
+random
+time
+sys
+os
+warnings

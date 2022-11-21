@@ -1,0 +1,6 @@
+*.txt
+data/
+pytorch/
+.ipynb_checkpoints/
+*.ipynb
+*.tar.gz
