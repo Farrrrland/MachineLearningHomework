@@ -3,6 +3,3 @@ matplotlib
 torch
 torchtext
 torchvision
-sys
-os
-warnings
