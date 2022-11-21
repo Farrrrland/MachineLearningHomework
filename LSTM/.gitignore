@@ -2,5 +2,5 @@
 data/
 pytorch/
 .ipynb_checkpoints/
-# *.ipynb
+*.ipynb
 *.tar.gz
