@@ -1,4 +1,7 @@
 # MachineLearningHomework
+
+<!-- [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Farrrrland/MachineLearningHomework/HEAD) -->
+
 This repo is for programming homework of COMP5212 Machine Learning in HKUST
 
 `./BinaryClassification` is the first programming homework with simple hand written images classification using logistic regression and SVM.

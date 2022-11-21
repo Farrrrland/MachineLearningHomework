@@ -4,7 +4,6 @@ import torch.nn as nn
 from torchtext import data
 from torchtext import datasets
 import torch.optim as optim
-import time
 import warnings
 warnings.filterwarnings('ignore')
 
