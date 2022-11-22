@@ -98,6 +98,3 @@ with open(fname, 'w') as f:
             epoch + 1, num_epoch,
             epoch_loss,
             100.0 * correct / total))
-
-
-
