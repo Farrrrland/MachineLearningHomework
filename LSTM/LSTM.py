@@ -50,10 +50,9 @@ class BiLSTM(nn.Module):
     def forward(self, input):
         embedding_input = self.word_vec(input)
         embedding_input = embedding_input.permute(1, 0, 2)
-        output, (h_n, c_n) = self.bilstm(embedding_input)
-        encoding1 = torch.cat([h_n[0], h_n[1]], dim=1)
-        encoding2 = torch.cat([output[0], output[-1]], dim=1)
-        fc_out = self.fc(encoding1).squeeze()
+        __, (h_n, ___) = self.bilstm(embedding_input)
+        encoding = torch.cat([h_n[0], h_n[1]], dim=1)
+        fc_out = self.fc(encoding).squeeze()
         return fc_out
  
 model = BiLSTM()
